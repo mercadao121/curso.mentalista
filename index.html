@@ -1,0 +1,1768 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MERCADÃO | Escola de Mentalismo</title>
+<meta name="description" content="Curso gratuito de observação, memória, dedução, linguagem corporal e mentalismo. Aprenda com aulas e exercícios práticos.">
+
+<style>
+:root {
+  --bg: #f3f7fc;
+  --white: #ffffff;
+  --light: #e8f1fc;
+  --blue: #1769d2;
+  --blue-dark: #104a91;
+  --text: #17263b;
+  --muted: #607086;
+  --border: #dce6f1;
+  --green: #198754;
+  --shadow: 0 10px 35px rgba(32, 66, 110, .09);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 12px 19px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+.btn-light {
+  background: white;
+  color: var(--blue);
+  border: 1px solid var(--border);
+}
+
+.btn-light:hover {
+  background: var(--light);
+  color: var(--blue-dark);
+}
+
+.hero {
+  padding: 76px 0 65px;
+  background:
+    radial-gradient(circle at 85% 10%, #d4e8ff 0, transparent 32%),
+    linear-gradient(135deg, #ffffff, #eef5ff);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.tag {
+  display: inline-block;
+  background: #dcecff;
+  color: var(--blue-dark);
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  margin-bottom: 17px;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 57px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.hero-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.stat {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 13px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--blue);
+  font-size: 23px;
+}
+
+.stat small {
+  color: var(--muted);
+}
+
+section {
+  padding: 65px 0;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 15px;
+}
+
+.lesson {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(30,60,100,.035);
+}
+
+.lesson summary {
+  padding: 20px 22px;
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.lesson summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson summary::after {
+  content: "+";
+  color: var(--blue);
+  font-size: 25px;
+}
+
+.lesson[open] summary::after {
+  content: "−";
+}
+
+.lesson-content {
+  padding: 0 22px 24px;
+  color: #46566c;
+}
+
+.lesson-content h4 {
+  color: var(--text);
+  font-size: 16px;
+  margin: 18px 0 6px;
+}
+
+.lesson-content p {
+  margin: 9px 0;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  padding-left: 23px;
+  margin: 8px 0;
+}
+
+.lesson-content li {
+  margin: 5px 0;
+}
+
+.example {
+  background: #eef5ff;
+  border-left: 4px solid var(--blue);
+  padding: 14px 17px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0;
+  color: #304761;
+}
+
+.warning {
+  background: #fff7e5;
+  border-left: 4px solid #e7a525;
+  padding: 14px 17px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0;
+}
+
+.green-box {
+  background: #e8f7ef;
+  border-left: 4px solid var(--green);
+  padding: 14px 17px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-box {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+}
+
+.info-box p,
+.info-box li {
+  color: var(--muted);
+}
+
+.info-box ul {
+  padding-left: 22px;
+}
+
+.case-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 23px;
+  box-shadow: var(--shadow);
+}
+
+.case-card h3 {
+  margin-bottom: 10px;
+}
+
+.case-card p {
+  color: var(--muted);
+}
+
+.case-card details {
+  margin-top: 15px;
+  background: var(--light);
+  padding: 13px;
+  border-radius: 10px;
+}
+
+.case-card summary {
+  cursor: pointer;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.case-card details p {
+  margin-top: 10px;
+  color: var(--text);
+}
+
+.quiz-box {
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 27px;
+  border-radius: 17px;
+  max-width: 800px;
+}
+
+.question {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.question p {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.question label {
+  display: block;
+  background: #f5f8fc;
+  border: 1px solid var(--border);
+  padding: 10px 13px;
+  border-radius: 9px;
+  margin: 8px 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.question label:hover {
+  background: var(--light);
+}
+
+.question input {
+  margin-right: 9px;
+  accent-color: var(--blue);
+}
+
+#quiz-result {
+  margin-top: 18px;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.progress-wrap {
+  height: 10px;
+  background: #dfe8f3;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 12px 0 18px;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: var(--blue);
+  transition: width .3s;
+}
+
+.day-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.day {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.day strong {
+  color: var(--blue);
+  display: block;
+}
+
+.day p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.day input {
+  accent-color: var(--blue);
+  margin-right: 8px;
+}
+
+.cta {
+  background: linear-gradient(135deg, #e3f0ff, #ffffff);
+  border: 1px solid #cfe1f8;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0 auto 22px;
+}
+
+footer {
+  padding: 30px 0;
+  background: white;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.top-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+  .hero-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero-image {
+    height: 260px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .grid-3,
+  .day-list {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 25px 18px;
+  }
+
+  .lesson summary {
+    padding: 17px;
+  }
+
+  .lesson-content {
+    padding: 0 17px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="brand">
+      <img src="MERCADÃO.png" alt="Logo MERCADÃO"
+           onerror="this.style.display='none'">
+      <span>MERCADÃO</span>
+    </a>
+
+    <nav>
+      <a href="#curso">Aulas</a>
+      <a href="#casos">Casos</a>
+      <a href="#quiz">Teste</a>
+      <a href="#plano">30 dias</a>
+    </nav>
+
+    <a class="btn" href="https://discord.gg/rxYgAyEpKu"
+       target="_blank" rel="noopener noreferrer">Entrar no Discord</a>
+  </div>
+</header>
+
+<main>
+
+<!-- INÍCIO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">CURSO GRATUITO • MERCADÃO</span>
+      <h1>Aprenda a observar o mundo como um <span>mentalista.</span></h1>
+      <p>
+        Desenvolva sua atenção, memória, raciocínio lógico e capacidade
+        de perceber detalhes. Estude técnicas de mentalismo, pratique
+        deduções e descubra como analisar situações sem tirar conclusões
+        precipitadas.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#curso">Começar as aulas</a>
+        <a class="btn btn-light" href="#casos">Resolver um caso</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>15+</strong>
+          <small>Aulas e atividades</small>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <small>Conteúdo gratuito</small>
+        </div>
+        <div class="stat">
+          <strong>30 dias</strong>
+          <small>Plano de treinamento</small>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img class="hero-image"
+           src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
+           alt="Caderno e anotações para estudar"
+           onerror="this.style.display='none'">
+      <p class="hero-note">
+        Inspirado no estilo de investigação e observação de Patrick Jane.
+        O curso ensina habilidades reais, não poderes sobrenaturais.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUÇÃO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>O que você vai aprender?</h2>
+      <p>
+        O objetivo é aprender a observar com atenção, formular hipóteses
+        e testar suas ideias. Você não precisa ter experiência nem comprar
+        materiais: um caderno e alguns minutos por dia já ajudam.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+             alt="Pessoa estudando e analisando informações" loading="lazy">
+        <div class="card-body">
+          <h3>Observação</h3>
+          <p>Aprenda a notar detalhes, comparar informações e separar aquilo
+             que você realmente viu daquilo que apenas imaginou.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+             alt="Anotações e planejamento" loading="lazy">
+        <div class="card-body">
+          <h3>Dedução</h3>
+          <p>Use evidências, lógica e hipóteses alternativas para chegar
+             a conclusões mais cuidadosas.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+             alt="Pessoa aprendendo em um computador" loading="lazy">
+        <div class="card-body">
+          <h3>Memória e atenção</h3>
+          <p>Treine sua capacidade de recordar informações, manter o foco
+             e organizar o que aprende.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AVISO -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="warning">
+      <strong>Uma regra importante:</strong> observar alguém não significa
+      saber automaticamente o que essa pessoa pensa. Gestos, expressões e
+      hábitos podem ter várias explicações. Neste curso, você vai aprender
+      a investigar possibilidades, não a tratar palpites como certezas.
+    </div>
+  </div>
+</section>
+
+<!-- CURSO COMPLETO -->
+<section id="curso">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">CURSO COMPLETO</span>
+      <h2>As aulas de mentalismo e dedução</h2>
+      <p>
+        Abra cada aula para ler a explicação, estudar exemplos e fazer
+        o exercício. Você pode estudar na ordem ou voltar aos temas
+        sempre que quiser.
+      </p>
+    </div>
+
+    <div class="lesson-list">
+
+      <details class="lesson" open>
+        <summary>Aula 1 — O que é mentalismo?</summary>
+        <div class="lesson-content">
+          <p>
+            Mentalismo é uma forma de entretenimento que cria a impressão
+            de que alguém consegue ler pensamentos, prever escolhas ou
+            descobrir informações aparentemente impossíveis. Pode combinar
+            ilusionismo, técnicas de apresentação, atenção, memória,
+            observação e princípios de psicologia.
+          </p>
+
+          <h4>O que mentalismo não é</h4>
+          <p>
+            Não é telepatia comprovada, leitura infalível de pensamentos
+            nem capacidade de descobrir toda a personalidade de alguém
+            olhando para seu rosto. Uma apresentação convincente pode
+            parecer misteriosa sem envolver poderes sobrenaturais.
+          </p>
+
+          <h4>Três áreas para estudar</h4>
+          <ul>
+            <li><strong>Habilidades:</strong> atenção, memória e comunicação.</li>
+            <li><strong>Raciocínio:</strong> lógica, hipóteses e análise de evidências.</li>
+            <li><strong>Apresentação:</strong> criar uma experiência interessante
+                para o público de forma honesta.</li>
+          </ul>
+
+          <div class="example">
+            <strong>Exemplo:</strong> você vê uma mesa com um livro aberto,
+            uma caneta e uma folha cheia de anotações. Pode imaginar que
+            alguém estava estudando, mas não sabe quem estudou, por quanto
+            tempo ou qual era o assunto. Uma observação permite criar
+            hipóteses, não inventar detalhes como se fossem fatos.
+          </div>
+
+          <h4>Exercício</h4>
+          <p>Anote três coisas que você considera fatos e duas coisas que
+             seriam apenas suposições em uma cena que você observou.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 2 — Como observar detalhes</summary>
+        <div class="lesson-content">
+          <p>
+            Observar bem é direcionar a atenção para informações específicas.
+            Muitas vezes olhamos para algo sem registrar seus detalhes.
+            O treinamento consiste em olhar com um objetivo e depois verificar
+            o que realmente conseguimos lembrar.
+          </p>
+
+          <h4>O método das cinco perguntas</h4>
+          <ol>
+            <li>O que está presente?</li>
+            <li>O que está ausente, mas eu esperava encontrar?</li>
+            <li>Quais detalhes são mais evidentes?</li>
+            <li>Quais detalhes precisam ser verificados?</li>
+            <li>Que outras explicações podem existir?</li>
+          </ol>
+
+          <div class="example">
+            <strong>Exemplo:</strong> você entra em uma sala e percebe
+            três cadeiras, uma janela aberta e um copo sobre a mesa.
+            Esses são detalhes observáveis. Dizer que alguém acabou de sair
+            é uma hipótese, porque a cena sozinha não prova isso.
+          </div>
+
+          <h4>Treino de 60 segundos</h4>
+          <ol>
+            <li>Escolha um ambiente seguro e comum.</li>
+            <li>Observe durante um minuto.</li>
+            <li>Desvie o olhar e escreva cinco detalhes.</li>
+            <li>Confira o ambiente e marque os detalhes corretos.</li>
+            <li>Repita em outro dia e compare seus resultados.</li>
+          </ol>
+
+          <p>O objetivo não é lembrar tudo imediatamente. É perceber quais
+             tipos de detalhes você costuma deixar passar.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 3 — Fatos, inferências e suposições</summary>
+        <div class="lesson-content">
+          <p>
+            Essa é uma das habilidades mais importantes para quem quer
+            raciocinar como um investigador. Um fato é algo que pode ser
+            observado ou confirmado. Uma inferência é uma conclusão baseada
+            em informações. Uma suposição é uma possibilidade ainda sem
+            evidências suficientes.
+          </p>
+
+          <h4>Como diferenciar</h4>
+          <ul>
+            <li><strong>Fato:</strong> o chão está molhado.</li>
+            <li><strong>Inferência:</strong> provavelmente houve contato com água.</li>
+            <li><strong>Suposição:</strong> alguém derrubou um balde há dois minutos.</li>
+          </ul>
+
+          <p>O fato pode ser confirmado diretamente. A inferência parece
+             razoável, mas ainda aceita outras explicações. A suposição
+             acrescenta detalhes que não foram demonstrados.</p>
+
+          <h4>O método das três colunas</h4>
+          <p>Ao analisar qualquer situação, escreva:</p>
+          <ol>
+            <li><strong>O que sei:</strong> informações verificáveis.</li>
+            <li><strong>O que penso:</strong> interpretação provisória.</li>
+            <li><strong>O que falta saber:</strong> informações necessárias.</li>
+          </ol>
+
+          <div class="green-box">
+            <strong>Desafio:</strong> uma pessoa está usando um guarda-chuva
+            molhado. Você pode concluir que o guarda-chuva está molhado.
+            Pode ser que tenha chovido, mas também pode ter sido molhado
+            de outra forma. Não transforme uma possibilidade em certeza.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 4 — Dedução e raciocínio lógico</summary>
+        <div class="lesson-content">
+          <p>
+            Deduzir é chegar a uma conclusão a partir de premissas.
+            Uma dedução válida depende das informações usadas. Se uma
+            premissa estiver errada ou incompleta, a conclusão pode não
+            descrever a realidade.
+          </p>
+
+          <h4>Exemplo simples</h4>
+          <p>Premissa 1: todos os objetos da caixa são azuis.</p>
+          <p>Premissa 2: este objeto veio dessa caixa.</p>
+          <p>Conclusão: se as duas premissas forem verdadeiras, este objeto
+             é azul.</p>
+
+          <h4>Como investigar uma situação</h4>
+          <ol>
+            <li>Defina a pergunta que você quer responder.</li>
+            <li>Liste as informações confirmadas.</li>
+            <li>Crie duas ou mais explicações possíveis.</li>
+            <li>Procure evidências que diferenciem essas explicações.</li>
+            <li>Atualize sua conclusão quando surgir informação nova.</li>
+          </ol>
+
+          <div class="example">
+            <strong>Exemplo:</strong> uma janela está aberta e há folhas
+            no chão. O vento pode ter espalhado as folhas, mas alguém
+            também pode tê-las deixado ali. A pergunta útil é:
+            que evidência ajudaria a distinguir as possibilidades?
+          </div>
+
+          <h4>Armadilha comum</h4>
+          <p>Não procure apenas informações que confirmem sua primeira ideia.
+             Procure também aquilo que poderia provar que ela está errada.
+             Isso reduz erros de raciocínio.</p>
+
+          <h4>Exercício</h4>
+          <p>Escolha uma explicação para um pequeno acontecimento e escreva
+             duas outras explicações possíveis antes de decidir qual é a
+             mais provável.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 5 — Linguagem corporal sem mitos</summary>
+        <div class="lesson-content">
+          <p>
+            A linguagem corporal inclui postura, movimentos, expressões
+            faciais e gestos. Esses sinais podem oferecer contexto, mas
+            não funcionam como um dicionário universal. O mesmo gesto pode
+            ter significados diferentes dependendo da pessoa e da situação.
+          </p>
+
+          <h4>O que observar com cuidado</h4>
+          <ul>
+            <li>Se a pessoa parece confortável ou desconfortável na situação.</li>
+            <li>Se sua postura muda depois de um assunto específico.</li>
+            <li>Se as palavras e o tom de voz parecem transmitir mensagens diferentes.</li>
+            <li>Se o ambiente, o cansaço ou a distração podem explicar o comportamento.</li>
+          </ul>
+
+          <h4>O que você não deve concluir automaticamente</h4>
+          <ul>
+            <li>Cruzar os braços não prova que alguém está mentindo.</li>
+            <li>Desviar o olhar não prova culpa.</li>
+            <li>Ficar inquieto não revela necessariamente nervosismo ou desonestidade.</li>
+            <li>Sorrir não prova que alguém está feliz em todas as circunstâncias.</li>
+          </ul>
+
+          <div class="warning">
+            Não existe um gesto isolado que confirme uma mentira. Para avaliar
+            uma afirmação, considere os fatos, a consistência das informações
+            e as evidências disponíveis — não apenas a aparência de alguém.
+          </div>
+
+          <h4>Exercício respeitoso</h4>
+          <p>Assista a uma entrevista pública e observe como o entrevistado
+             explica suas ideias. Anote mudanças de postura e tom sem atribuir
+             emoções ou intenções como se fossem certezas. Depois, concentre-se
+             no conteúdo das respostas.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 6 — Memória e associação</summary>
+        <div class="lesson-content">
+          <p>
+            A memória melhora quando você organiza as informações, relaciona
+            ideias e pratica a recuperação do que aprendeu. Reler várias
+            vezes pode dar uma sensação de familiaridade sem garantir que
+            você conseguirá recordar o conteúdo depois.
+          </p>
+
+          <h4>Técnica 1: associação</h4>
+          <p>Relacione a informação nova a uma imagem, palavra ou ideia
+             que seja fácil de lembrar. Quanto mais significativa for
+             a associação, mais útil ela pode ser.</p>
+
+          <h4>Técnica 2: recuperação ativa</h4>
+          <p>Leia um pequeno trecho, feche o material e tente explicar
+             o conteúdo com suas próprias palavras. Depois, confira
+             o que esqueceu e corrija.</p>
+
+          <h4>Técnica 3: repetição espaçada</h4>
+          <p>Revise o conteúdo em intervalos: no mesmo dia, no dia seguinte,
+             alguns dias depois e novamente na semana seguinte. Ajuste
+             os intervalos conforme a dificuldade.</p>
+
+          <h4>Exercício dos dez objetos</h4>
+          <ol>
+            <li>Observe dez objetos comuns por 30 segundos.</li>
+            <li>Desvie o olhar e escreva os objetos de que se lembra.</li>
+            <li>Acrescente um detalhe de cada objeto.</li>
+            <li>Confira sua lista e repita em outro momento.</li>
+          </ol>
+
+          <p>Não se preocupe com recordes. Use o exercício para descobrir
+             quais estratégias ajudam você a recordar melhor.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 7 — Atenção e concentração</summary>
+        <div class="lesson-content">
+          <p>
+            Atenção é a capacidade de selecionar as informações importantes
+            entre muitas distrações. Ela não é ilimitada: cansaço, notificações,
+            preocupação e excesso de tarefas podem dificultar a concentração.
+          </p>
+
+          <h4>Como treinar</h4>
+          <ul>
+            <li>Escolha uma tarefa por vez.</li>
+            <li>Deixe notificações desnecessárias desativadas durante o estudo.</li>
+            <li>Defina um objetivo pequeno e específico.</li>
+            <li>Faça pausas quando perceber que sua atenção caiu.</li>
+            <li>No fim, registre o que conseguiu aprender.</li>
+          </ul>
+
+          <div class="example">
+            Em vez de escrever “vou estudar observação”, experimente:
+            “vou observar uma imagem por um minuto e registrar oito detalhes”.
+            Um objetivo concreto facilita perceber o próprio progresso.
+          </div>
+
+          <h4>Exercício de escuta</h4>
+          <p>Durante uma conversa comum, concentre-se no que a outra pessoa
+             está dizendo, sem preparar sua resposta antes de ela terminar.
+             Depois, resuma o que entendeu e pergunte se compreendeu
+             corretamente.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 8 — Fazer boas perguntas</summary>
+        <div class="lesson-content">
+          <p>
+            Perguntas bem formuladas ajudam a esclarecer informações sem
+            pressionar alguém. Em vez de tentar adivinhar o que a pessoa
+            pensa, dê espaço para ela explicar o próprio ponto de vista.
+          </p>
+
+          <h4>Perguntas abertas</h4>
+          <p>Permitem respostas detalhadas:</p>
+          <ul>
+            <li>“Você pode me explicar o que aconteceu?”</li>
+            <li>“O que fez você chegar a essa conclusão?”</li>
+            <li>“Qual parte parece mais importante para você?”</li>
+          </ul>
+
+          <h4>Perguntas de esclarecimento</h4>
+          <ul>
+            <li>“Quando você diz isso, o que quer dizer exatamente?”</li>
+            <li>“Você se lembra de algum detalhe que ajude a entender?”</li>
+            <li>“Existe outra explicação possível?”</li>
+          </ul>
+
+          <h4>Escuta ativa</h4>
+          <p>Escutar ativamente significa prestar atenção, não interromper
+             sem necessidade e confirmar se entendeu. Não é uma técnica
+             para controlar alguém; é uma forma de comunicar melhor.</p>
+
+          <div class="warning">
+            Evite perguntas destinadas a constranger, enganar ou obter
+            informações privadas sem consentimento. Respeitar limites
+            é mais importante do que resolver uma curiosidade.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 9 — Como analisar uma cena</summary>
+        <div class="lesson-content">
+          <p>
+            Uma investigação começa com uma pergunta clara. Em seguida,
+            você registra os fatos, identifica o que falta saber e considera
+            explicações alternativas. Não é necessário criar uma história
+            elaborada para cada detalhe.
+          </p>
+
+          <h4>Roteiro de análise</h4>
+          <ol>
+            <li><strong>Cena:</strong> descreva o que consegue ver.</li>
+            <li><strong>Detalhes:</strong> anote os elementos relevantes.</li>
+            <li><strong>Hipóteses:</strong> proponha pelo menos duas explicações.</li>
+            <li><strong>Verificação:</strong> pergunte qual informação ajudaria a decidir.</li>
+            <li><strong>Conclusão:</strong> diga o que é mais provável e qual é sua incerteza.</li>
+          </ol>
+
+          <div class="example">
+            <strong>Cena:</strong> uma mochila está perto da porta e há
+            um caderno sobre uma cadeira. Você sabe onde os objetos estão.
+            Não sabe quem os colocou ali nem por qual motivo. Para descobrir,
+            precisaria de outras informações.
+          </div>
+
+          <h4>Exercício</h4>
+          <p>Escolha uma foto de um lugar público. Escreva cinco fatos
+             visíveis, duas hipóteses e três perguntas que ajudariam
+             a entender melhor a cena.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 10 — Reconhecer padrões sem tirar conclusões rápidas</summary>
+        <div class="lesson-content">
+          <p>
+            Um padrão é uma repetição ou regularidade identificável em
+            várias observações. Reconhecer padrões pode ajudar a organizar
+            informações, mas também pode levar a perceber relações que
+            não existem.
+          </p>
+
+          <h4>Exemplo</h4>
+          <p>Você percebe que costuma esquecer um assunto quando estuda
+             apenas uma vez. Isso pode sugerir que revisões ajudam você.
+             Para ter uma ideia melhor, compare sessões de estudo e veja
+             se o resultado se repete.</p>
+
+          <h4>Três cuidados</h4>
+          <ul>
+            <li>Não escolha apenas exemplos que confirmam sua ideia.</li>
+            <li>Considere coincidências e explicações alternativas.</li>
+            <li>Procure mais de uma observação antes de afirmar que existe um padrão.</li>
+          </ul>
+
+          <h4>Exercício</h4>
+          <p>Registre um hábito de estudo durante cinco dias. Depois,
+             procure uma tendência e escreva também uma explicação
+             alternativa para o resultado.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 11 — Probabilidade e previsões</summary>
+        <div class="lesson-content">
+          <p>
+            Prever não é saber o futuro. É estimar o que pode acontecer
+            usando informações disponíveis. Uma previsão responsável
+            considera a incerteza e pode ser atualizada quando aparecem
+            novos dados.
+          </p>
+
+          <h4>Exemplo simples</h4>
+          <p>Se você leva um guarda-chuva porque a previsão indica chuva,
+             está usando uma estimativa, não uma garantia de que choverá
+             exatamente onde você está.</p>
+
+          <h4>Como fazer uma previsão melhor</h4>
+          <ol>
+            <li>Defina exatamente o que está tentando prever.</li>
+            <li>Use informações relevantes, não apenas intuição.</li>
+            <li>Registre sua previsão antes de saber o resultado.</li>
+            <li>Depois, compare a previsão com o que aconteceu.</li>
+            <li>Aprenda com os erros, sem alterar a previsão antiga para parecer correta.</li>
+          </ol>
+
+          <div class="example">
+            Você pode prever: “Acredito que vou lembrar de seis dos dez
+            objetos amanhã”. No dia seguinte, confira o resultado e registre
+            a diferença. Com várias tentativas, você pode avaliar melhor
+            suas estimativas.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 12 — Como funciona um truque de mentalismo</summary>
+        <div class="lesson-content">
+          <p>
+            Uma apresentação de mentalismo pode combinar preparação,
+            escolhas de apresentação, atenção do público, memória,
+            sugestões e métodos de ilusionismo. O efeito final pode parecer
+            impossível, embora exista uma explicação prática por trás.
+          </p>
+
+          <h4>Elementos de uma boa apresentação</h4>
+          <ul>
+            <li><strong>Clareza:</strong> o público entende qual é o desafio.</li>
+            <li><strong>Ritmo:</strong> a apresentação não precisa correr.</li>
+            <li><strong>Foco:</strong> a atenção do público acompanha a experiência.</li>
+            <li><strong>Prática:</strong> ensaiar reduz esquecimentos e interrupções.</li>
+            <li><strong>Respeito:</strong> ninguém deve ser humilhado ou pressionado a participar.</li>
+          </ul>
+
+          <h4>Exercício de apresentação</h4>
+          <p>Prepare uma demonstração simples de memória: mostre uma lista
+             curta de palavras, esconda-a e tente recordar a ordem usando
+             associações. Explique que se trata de uma habilidade treinável,
+             não de uma leitura sobrenatural da mente.</p>
+
+          <div class="warning">
+            Em apresentações, não alegue possuir poderes reais nem use
+            técnicas para explorar medo, fragilidade emocional ou informações
+            privadas de alguém.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 13 — Criar hipóteses como um investigador</summary>
+        <div class="lesson-content">
+          <p>
+            Uma hipótese é uma explicação possível que pode ser examinada.
+            Uma boa hipótese é específica o suficiente para ser avaliada
+            e não depende de inventar detalhes invisíveis.
+          </p>
+
+          <h4>Exemplo prático</h4>
+          <p>Você encontra um livro fora da estante. Algumas hipóteses:
+          alguém o consultou; ele caiu; alguém estava organizando os livros.
+          O livro fora do lugar, sozinho, não permite escolher uma explicação
+          com certeza.</p>
+
+          <h4>Compare as hipóteses</h4>
+          <ul>
+            <li>Que evidência apoiaria cada explicação?</li>
+            <li>Que evidência enfraqueceria cada explicação?</li>
+            <li>Existe uma hipótese mais simples que explica os fatos?</li>
+            <li>O que ainda não sabemos?</li>
+          </ul>
+
+          <h4>Exercício</h4>
+          <p>Escolha um pequeno acontecimento fictício e escreva três
+             explicações. Para cada uma, anote uma evidência que poderia
+             apoiá-la e outra que poderia enfraquecê-la.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 14 — Como evitar vieses mentais</summary>
+        <div class="lesson-content">
+          <p>
+            Nosso cérebro usa atalhos para decidir mais rapidamente.
+            Eles podem ser úteis, mas às vezes nos levam a erros previsíveis.
+            Reconhecer esses erros melhora o raciocínio.
+          </p>
+
+          <h4>Viés de confirmação</h4>
+          <p>É a tendência de dar mais atenção às informações que apoiam
+             uma ideia que já temos. Para reduzir esse efeito, procure
+             ativamente uma explicação contrária.</p>
+
+          <h4>Primeira impressão</h4>
+          <p>Uma impressão inicial pode influenciar a maneira como
+             interpretamos as informações seguintes. Trate-a como
+             provisória e permita que novas evidências mudem sua opinião.</p>
+
+          <h4>Excesso de confiança</h4>
+          <p>Sentir-se certo não significa estar certo. Anotar o nível
+             de confiança e verificar os resultados pode mostrar quando
+             suas estimativas precisam melhorar.</p>
+
+          <div class="green-box">
+            <strong>Regra prática:</strong> antes de concluir, pergunte:
+            “O que me faria mudar de ideia?” Se não conseguir pensar em
+            nenhuma resposta, talvez esteja defendendo uma crença em vez
+            de investigar a situação.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 15 — Comunicação e empatia</summary>
+        <div class="lesson-content">
+          <p>
+            Entender melhor uma conversa exige atenção às palavras,
+            ao contexto e aos limites da outra pessoa. Empatia não é
+            adivinhar pensamentos; é tentar compreender a experiência
+            de alguém sem presumir que você sabe tudo sobre ela.
+          </p>
+
+          <h4>Pratique estes hábitos</h4>
+          <ul>
+            <li>Deixe a pessoa concluir o que está dizendo.</li>
+            <li>Faça perguntas claras e sem acusações.</li>
+            <li>Resuma o que entendeu para confirmar.</li>
+            <li>Aceite que alguém pode não querer responder.</li>
+            <li>Não use observações para constranger ou manipular.</li>
+          </ul>
+
+          <div class="example">
+            Em vez de dizer “eu sei que você está mentindo porque desviou
+            o olhar”, diga: “Não entendi bem essa parte. Você pode explicar
+            de novo?”. A segunda frase busca esclarecimento sem transformar
+            um gesto ambíguo em acusação.
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Aula 16 — Revisão e método de estudo</summary>
+        <div class="lesson-content">
+          <p>
+            Aprender essas habilidades exige prática e revisão. Você não
+            precisa acertar tudo de primeira: o progresso aparece quando
+            você registra o que observou, verifica os resultados e corrige
+            os próprios erros.
+          </p>
+
+          <h4>Seu caderno de treinamento</h4>
+          <p>Use uma página para cada exercício, com estas informações:</p>
+          <ol>
+            <li>Data e objetivo do exercício.</li>
+            <li>Fatos observados.</li>
+            <li>Hipóteses consideradas.</li>
+            <li>Resultado da verificação.</li>
+            <li>O que aprendeu e o que faria diferente.</li>
+          </ol>
+
+          <h4>Como saber se está melhorando?</h4>
+          <p>Compare registros feitos em dias diferentes. Veja se suas
+             observações estão mais precisas, se você considera explicações
+             alternativas e se consegue explicar por que chegou a uma
+             conclusão.</p>
+
+          <p>O objetivo não é parecer misterioso. É se tornar uma pessoa
+             mais atenta, cuidadosa e lógica.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASOS -->
+<section id="casos" style="background:#eaf2fc">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">DESAFIOS PRÁTICOS</span>
+      <h2>Resolva os casos</h2>
+      <p>
+        Leia as pistas, formule sua própria explicação e só depois abra
+        a resposta sugerida. Em alguns casos, mais de uma explicação
+        pode ser possível.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="case-card">
+        <h3>🔎 Caso 1: A mesa molhada</h3>
+        <p>
+          Você entra em uma sala e encontra uma mesa molhada. A janela está
+          fechada e existe um copo vazio perto da borda. O que aconteceu?
+        </p>
+        <details>
+          <summary>Ver análise sugerida</summary>
+          <p>
+            O fato confirmado é que a mesa está molhada e existe um copo
+            vazio. O líquido pode ter vindo do copo, de uma limpeza anterior
+            ou de outra fonte. A cena não oferece informações suficientes
+            para confirmar uma única explicação.
+          </p>
+        </details>
+      </article>
+
+      <article class="case-card">
+        <h3>🧩 Caso 2: O livro desaparecido</h3>
+        <p>
+          Um livro não está mais na estante. Uma pessoa diz que o viu
+          ontem sobre a mesa. Você não sabe quem o pegou. Qual é o próximo passo?
+        </p>
+        <details>
+          <summary>Ver análise sugerida</summary>
+          <p>
+            Primeiro, confirme onde o livro costuma ficar e se alguém o
+            moveu. Pergunte de maneira neutra se alguém o viu ou guardou
+            em outro lugar. Não há evidência suficiente para acusar alguém.
+          </p>
+        </details>
+      </article>
+
+      <article class="case-card">
+        <h3>🕵️ Caso 3: A previsão</h3>
+        <p>
+          Você prevê que uma moeda cairá com cara para cima. A moeda cai
+          com coroa. O que deve fazer para melhorar suas previsões?
+        </p>
+        <details>
+          <summary>Ver análise sugerida</summary>
+          <p>
+            Registre o erro e lembre-se de que uma moeda comum tem dois
+            resultados principais. Uma previsão isolada não demonstra
+            habilidade especial. Registre várias previsões antecipadamente
+            e compare os resultados sem alterar os registros.
+          </p>
+        </details>
+      </article>
+    </div>
+
+    <div class="two-col" style="margin-top:22px">
+      <div class="info-box">
+        <h3>📝 Desafio extra: a cena misteriosa</h3>
+        <p>
+          Em uma sala há uma cadeira afastada da mesa, um caderno fechado
+          e uma luz acesa. Escreva cinco fatos observáveis, três hipóteses
+          e duas perguntas que ajudariam a esclarecer a situação.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>🎯 Desafio extra: memória visual</h3>
+        <p>
+          Escolha uma foto de um ambiente. Observe por 30 segundos,
+          esconda a imagem e escreva dez detalhes. Volte à foto, confira
+          a lista e conte quantos detalhes estavam corretos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">TESTE DE CONHECIMENTO</span>
+      <h2>Teste o que você aprendeu</h2>
+      <p>Responda às cinco perguntas. No final, você verá sua pontuação
+         e uma explicação sobre o resultado.</p>
+    </div>
+
+    <div class="quiz-box">
+      <div>
+        <strong>Progresso do teste</strong>
+        <div class="progress-wrap">
+          <div id="progress"></div>
+        </div>
+        <p class="small" id="progress-label">0 de 5 respondidas</p>
+      </div>
+
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. O que é um fato observável?</p>
+          <label><input type="radio" name="q1" value="a"> Uma certeza sobre o que outra pessoa pensa.</label>
+          <label><input type="radio" name="q1" value="b"> Uma informação que pode ser verificada.</label>
+          <label><input type="radio" name="q1" value="c"> A primeira ideia que aparece na cabeça.</label>
+        </div>
+
+        <div class="question">
+          <p>2. Cruzar os braços prova que alguém está mentindo?</p>
+          <label><input type="radio" name="q2" value="a"> Sim, sempre.</label>
+          <label><input type="radio" name="q2" value="b"> Sim, se a pessoa não olhar nos olhos.</label>
+          <label><input type="radio" name="q2" value="c"> Não. Um gesto isolado não comprova uma mentira.</label>
+        </div>
+
+        <div class="question">
+          <p>3. O que fazer quando existem várias explicações possíveis?</p>
+          <label><input type="radio" name="q3" value="a"> Escolher a mais dramática.</label>
+          <label><input type="radio" name="q3" value="b"> Comparar hipóteses e buscar evidências.</label>
+          <label><input type="radio" name="q3" value="c"> Ignorar qualquer informação contrária.</label>
+        </div>
+
+        <div class="question">
+          <p>4. Qual técnica pode ajudar a memória?</p>
+          <label><input type="radio" name="q4" value="a"> Tentar recordar o conteúdo sem olhar as anotações.</label>
+          <label><input type="radio" name="q4" value="b"> Nunca revisar o conteúdo.</label>
+          <label><input type="radio" name="q4" value="c"> Estudar sempre com distrações.</label>
+        </div>
+
+        <div class="question">
+          <p>5. O que é viés de confirmação?</p>
+          <label><input type="radio" name="q5" value="a"> Verificar todos os lados com o mesmo cuidado.</label>
+          <label><input type="radio" name="q5" value="b"> Mudar de opinião ao encontrar evidências.</label>
+          <label><input type="radio" name="q5" value="c"> Dar mais atenção ao que confirma uma ideia que já temos.</label>
+        </div>
+
+        <button class="btn" type="button" onclick="checkQuiz()">
+          Corrigir minhas respostas
+        </button>
+        <button class="btn btn-light" type="button" onclick="resetQuiz()">
+          Refazer teste
+        </button>
+      </form>
+
+      <div id="quiz-result" aria-live="polite"></div>
+      <div id="quiz-explanations"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANO 30 DIAS -->
+<section id="plano" style="background:#eaf2fc">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">ROTINA DE TREINAMENTO</span>
+      <h2>Plano de 30 dias</h2>
+      <p>
+        Reserve de 10 a 20 minutos por dia, se puder. Marque cada tarefa
+        quando terminar. Seu progresso fica marcado enquanto esta página
+        permanecer aberta; para guardar as marcações permanentemente,
+        você pode anotar seu avanço em um caderno.
+      </p>
+    </div>
+
+    <div class="progress-wrap">
+      <div id="plan-progress" style="height:100%;width:0;background:var(--green);transition:width .3s"></div>
+    </div>
+    <p class="small" id="plan-count">0 de 30 dias concluídos</p>
+
+    <div class="day-list" id="day-list"></div>
+  </div>
+</section>
+
+<!-- GLOSSÁRIO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Glossário rápido</h2>
+      <p>Os termos mais importantes do curso, explicados de maneira simples.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="info-box">
+        <h3>Observação</h3>
+        <p>Prestar atenção aos detalhes e registrar o que realmente está presente.</p>
+      </div>
+      <div class="info-box">
+        <h3>Inferência</h3>
+        <p>Uma conclusão construída a partir de informações e evidências.</p>
+      </div>
+      <div class="info-box">
+        <h3>Hipótese</h3>
+        <p>Uma explicação possível que ainda precisa ser examinada.</p>
+      </div>
+      <div class="info-box">
+        <h3>Dedução</h3>
+        <p>Um raciocínio que parte de premissas para chegar a uma conclusão.</p>
+      </div>
+      <div class="info-box">
+        <h3>Viés cognitivo</h3>
+        <p>Uma tendência de pensamento que pode afetar nossas decisões.</p>
+      </div>
+      <div class="info-box">
+        <h3>Recuperação ativa</h3>
+        <p>Tentar lembrar uma informação sem consultar o material imediatamente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="lesson-list">
+      <details class="lesson">
+        <summary>Este curso é realmente gratuito?</summary>
+        <div class="lesson-content">
+          <p>Sim. As aulas desta página são abertas e não exigem pagamento.
+             O convite do Discord é opcional.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Vou conseguir ler pensamentos?</summary>
+        <div class="lesson-content">
+          <p>Não. O curso treina observação, memória, raciocínio e apresentação.
+             Não existe método comprovado que permita ler pensamentos com
+             precisão sobrenatural.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Preciso estudar todos os dias?</summary>
+        <div class="lesson-content">
+          <p>Não é obrigatório. Uma rotina regular pode ajudar, mas adapte
+             o plano ao seu tempo e faça pausas quando precisar.</p>
+        </div>
+      </details>
+
+      <details class="lesson">
+        <summary>Posso usar as técnicas em conversas?</summary>
+        <div class="lesson-content">
+          <p>Você pode praticar escuta, atenção e comunicação respeitosa.
+             Não use observações para invadir a privacidade, pressionar
+             alguém ou fazer acusações sem evidências.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- DISCORD -->
+<section>
+  <div class="container">
+    <div class="cta">
+      <span class="tag">COMUNIDADE MERCADÃO</span>
+      <h2>Continue aprendendo com a comunidade</h2>
+      <p>
+        Entre no Discord do MERCADÃO para conhecer a comunidade e conversar
+        com outros membros. Continue praticando, compartilhe seus exercícios
+        e troque ideias com respeito.
+      </p>
+      <a class="btn" href="https://discord.gg/rxYgAyEpKu"
+         target="_blank" rel="noopener noreferrer">
+        Entrar no Discord
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>MERCADÃO</strong>
+    <p>Curso gratuito de observação, dedução, memória e mentalismo.</p>
+    <p>Conteúdo educativo e de entretenimento. As técnicas não garantem
+       identificar mentiras ou descobrir pensamentos.</p>
+    <a class="top-link" href="#inicio">Voltar ao início ↑</a>
+  </div>
+</footer>
+
+<script>
+/* TESTE INTERATIVO */
+
+const answers = {
+  q1: "b",
+  q2: "c",
+  q3: "b",
+  q4: "a",
+  q5: "c"
+};
+
+const explanations = {
+  q1: "Um fato é uma informação observável ou verificável.",
+  q2: "Gestos variam entre pessoas e situações; nenhum gesto isolado prova uma mentira.",
+  q3: "Comparar hipóteses e evidências ajuda a evitar conclusões precipitadas.",
+  q4: "Tentar recuperar a informação da memória é uma forma útil de praticar.",
+  q5: "O viés de confirmação faz com que favoreçamos informações que apoiam nossas ideias."
+};
+
+function updateQuizProgress() {
+  const total = Object.keys(answers).length;
+  let completed = 0;
+
+  for (const key of Object.keys(answers)) {
+    if (document.querySelector('input[name="' + key + '"]:checked')) {
+      completed++;
+    }
+  }
+
+  document.getElementById("progress").style.width =
+    (completed / total * 100) + "%";
+
+  document.getElementById("progress-label").textContent =
+    completed + " de " + total + " respondidas";
+}
+
+document.getElementById("quiz-form").addEventListener("change", updateQuizProgress);
+
+function checkQuiz() {
+  let score = 0;
+  let unanswered = 0;
+  let feedback = "";
+
+  for (const key of Object.keys(answers)) {
+    const selected = document.querySelector('input[name="' + key + '"]:checked');
+
+    if (!selected) {
+      unanswered++;
+      continue;
+    }
+
+    if (selected.value === answers[key]) {
+      score++;
+      feedback += "<p class='green-box'>✓ " + explanations[key] + "</p>";
+    } else {
+      feedback += "<p class='example'>↻ " + explanations[key] + "</p>";
+    }
+  }
+
+  if (unanswered > 0) {
+    document.getElementById("quiz-result").textContent =
+      "Você ainda precisa responder " + unanswered +
+      (unanswered === 1 ? " pergunta." : " perguntas.");
+    document.getElementById("quiz-explanations").innerHTML = "";
+    return;
+  }
+
+  document.getElementById("quiz-result").textContent =
+    "Sua pontuação: " + score + " de 5.";
+
+  let message = "";
+
+  if (score === 5) {
+    message = "Excelente! Você entendeu os principais conceitos.";
+  } else if (score >= 3) {
+    message = "Bom trabalho! Revise as explicações das questões para fixar o conteúdo.";
+  } else {
+    message = "Continue estudando. Volte às aulas e tente novamente quando se sentir preparado.";
+  }
+
+  document.getElementById("quiz-result").textContent += " " + message;
+  document.getElementById("quiz-explanations").innerHTML = feedback;
+}
+
+function resetQuiz() {
+  document.getElementById("quiz-form").reset();
+  document.getElementById("quiz-result").textContent = "";
+  document.getElementById("quiz-explanations").innerHTML = "";
+  updateQuizProgress();
+}
+
+/* PLANO DE ESTUDOS DE 30 DIAS */
+
+const tasks = [
+  "Dia 1 — Observe um ambiente e anote cinco fatos.",
+  "Dia 2 — Observe dez objetos e tente recordá-los.",
+  "Dia 3 — Separe fatos e suposições em uma cena.",
+  "Dia 4 — Leia a Aula 1 e explique o que é mentalismo.",
+  "Dia 5 — Faça o exercício de observação da Aula 2.",
+  "Dia 6 — Crie três hipóteses para uma situação fictícia.",
+  "Dia 7 — Revise suas anotações da primeira semana.",
+  "Dia 8 — Pratique a recuperação ativa com um texto curto.",
+  "Dia 9 — Aprenda cinco palavras novas e revise-as depois.",
+  "Dia 10 — Faça uma atividade curta sem notificações.",
+  "Dia 11 — Pratique escutar sem interromper.",
+  "Dia 12 — Escreva três perguntas abertas.",
+  "Dia 13 — Analise uma foto e liste fatos observáveis.",
+  "Dia 14 — Revise o que aprendeu nas duas primeiras semanas.",
+  "Dia 15 — Estude o conceito de viés de confirmação.",
+  "Dia 16 — Procure uma explicação alternativa para uma hipótese.",
+  "Dia 17 — Faça uma previsão simples e registre antes do resultado.",
+  "Dia 18 — Confira uma previsão antiga e avalie o resultado.",
+  "Dia 19 — Pratique resumir uma conversa ou texto.",
+  "Dia 20 — Resolva um dos casos desta página.",
+  "Dia 21 — Revise suas anotações e identifique erros úteis.",
+  "Dia 22 — Pratique memória com uma lista de dez palavras.",
+  "Dia 23 — Crie três hipóteses para uma cena fictícia.",
+  "Dia 24 — Identifique fatos e inferências em uma notícia.",
+  "Dia 25 — Explique uma aula usando suas próprias palavras.",
+  "Dia 26 — Faça o teste interativo sem consultar as respostas.",
+  "Dia 27 — Repita um exercício do começo do curso.",
+  "Dia 28 — Compare seu resultado com o registro anterior.",
+  "Dia 29 — Escolha o tema que mais precisa de revisão.",
+  "Dia 30 — Revise tudo e planeje sua próxima etapa de estudos."
+];
+
+const dayList = document.getElementById("day-list");
+
+tasks.forEach((task, index) => {
+  const item = document.createElement("label");
+  item.className = "day";
+  item.innerHTML =
+    '<span><input type="checkbox" class="day-check">' +
+    task.replace(/^Dia \d+ — /, "") +
+    '</span>';
+
+  const strong = document.createElement("strong");
+  strong.textContent = "Dia " + (index + 1);
+
+  item.prepend(strong);
+  dayList.appendChild(item);
+});
+
+function updatePlanProgress() {
+  const checks = document.querySelectorAll(".day-check");
+  let done = 0;
+
+  checks.forEach(check => {
+    if (check.checked) done++;
+  });
+
+  document.getElementById("plan-progress").style.width =
+    (done / checks.length * 100) + "%";
+
+  document.getElementById("plan-count").textContent =
+    done + " de " + checks.length + " dias concluídos";
+}
+
+document.querySelectorAll(".day-check").forEach(check => {
+  check.addEventListener("change", updatePlanProgress);
+});
+
+updateQuizProgress();
+updatePlanProgress();
+</script>
+
+</body>
+</html>
